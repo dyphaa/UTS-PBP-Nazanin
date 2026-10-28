@@ -4,42 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hayomi &amp; Kenryu's Wedding</title>
-<!-- [DI LUAR CHEATSHEET] Google Fonts: Pinyon Script, Playfair Display, Lora -->
 <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="terkunci">
 
-<!-- ============ BERANDA DEPAN (AMPLOP) ============ -->
+<!--Beranda-->
 <div id="sampul">
   <div class="sp-isi">
     <img class="sp-lily muncul masuk d1" src="assets/bunga.jpg" alt="">
     <p class="sp-atas muncul masuk d2">THE WEDDING OF</p>
     <h1 class="sp-nama muncul masuk d3">Hayomi<span>and</span>Kenryu</h1>
-
-    <div id="amplop" class="muncul masuk d3">
-      <div class="am-kartu">
-        <small>SAVE THE DATE</small>
-        <b>Hayomi &amp; Kenryu</b>
-        <p>08 . 11 . 2026</p>
+      <div id="amplop" class="muncul masuk d3">
+        <div class="am-kartu">
+          <small>SAVE THE DATE</small>
+          <b>Hayomi &amp; Kenryu</b>
+          <p>08 . 11 . 2026</p></div>
+        <div class="am-badan"></div>
+        <div class="am-tutup"></div>
+        <div class="am-segel"></div>
       </div>
-      <div class="am-badan"></div>
-      <div class="am-tutup"></div>
-      <div class="am-segel"></div>
-    </div>
 
     <p class="sp-tamu muncul masuk d1">Sunday, November 08, 2026<br>Villa Reverie</p>
     <button id="btnBuka" class="muncul masuk d2" onclick="bukaUndangan()">Open Invitation</button>
-    <small class="sp-klik muncul masuk d3">Tap to open the envelope</small>
+    <small class="sp-klik muncul masuk d3">Tap to open</small>
   </div>
 </div>
 
-<!-- MUSIK LATAR: lagu baru diputar saat amplop dibuka (lihat bukaUndangan() di script.js) -->
+<!-- backsound-->
 <audio id="musik" src="assets/lagu.mp3" loop></audio>
-<button id="tombolMusik" class="position-fixed" onclick="toggleMusik()">♪</button>
-
-<!-- ============ HEADER (tetap di atas saat di-scroll) ============ -->
+<!--bagian HEADER-->
 <header id="atas" class="position-fixed top-0 start-0 w-100 z-3">
   <div class="box">
     <img id="hLogo" src="assets/LOGO monogram.png" alt="HK">
@@ -52,10 +47,9 @@
   </div>
 </header>
 
-<!-- ============ 1. HOME ============ -->
+<!--HOME -->
 <section id="home" class="sec s-hero">
   <div class="box">
-
     <span class="muncul d1" id="tThe">THE</span>
     <span class="muncul d2" id="tH">H</span><span class="muncul d3" id="tAyomi">AYOMI</span>
     <span class="muncul d1" id="tWed">WEDDING OF</span>
@@ -69,7 +63,7 @@
   </div>
 </section>
 
-<!-- ============ 2. QUOTE ============ -->
+<!--QUOTE-->
 <section class="sec s-quote">
   <div class="box">
     <p class="muncul d1" id="quote">“In a world full of temporary things, walking with you through the quiet noise feels like home.”</p>
@@ -77,7 +71,7 @@
   </div>
 </section>
 
-<!-- ============ 3. GALLERY ============ -->
+<!--GALLERY-->
 <section id="gallery" class="sec s-gallery">
   <div class="box">
     <span class="muncul d1" id="gOur">OUR</span>
@@ -89,7 +83,7 @@
   </div>
 </section>
 
-<!-- ============ 4. MEMORIES ============ -->
+<!--MEMORIES-->
 <section class="sec s-memories">
   <div class="box">
     <img class="muncul d1 foto" id="m1" src="assets/g 1 bg 4.jpg" alt="">
@@ -101,16 +95,16 @@
   </div>
 </section>
 
-<!-- ============ 5. COUNTDOWN ============ -->
+<!--COUNTDOWN-->
 <section class="sec s-count">
-  <!-- video autoplay + loop (muted supaya boleh autoplay) -->
+  <!-- video lngsng di putar dan berulang-->
   <video autoplay loop muted src="assets/vid bg5.mp4"></video>
   <div class="box">
     <p class="muncul d1" id="cTgl">SUNDAY, NOVEMBER<br>08, 2026 | VILLA REVERIVE</p>
     <p class="muncul d2" id="cAn">An nimate Gathering</p>
     <p class="muncul d3" id="cJoin">Join us as we celebrate love</p>
     <h2 class="muncul d1" id="cJudul">The Long - Awaited Day</h2>
-    <!-- hitung mundur: tiap angka dan label punya posisi sendiri sesuai desain -->
+    <!-- hitung mundur-->
     <b class="dg" id="hari" style="left:727px">17</b><i class="kl" style="left:786px">:</i>
     <b class="dg" id="jam" style="left:812px">00</b><i class="kl" style="left:895px">:</i>
     <b class="dg" id="menit" style="left:922px">00</b><i class="kl" style="left:1030px">:</i>
@@ -118,13 +112,12 @@
     <span class="lb" style="left:717px">DAYS</span><span class="lb" style="left:810px">HOURS</span>
     <span class="lb" style="left:922px">MINUTES</span><span class="lb" style="left:1058px">SECOND</span>
   </div>
-  <div id="bulatHitam"></div>
 </section>
 
-<!-- ============ 6. EVENT ============ -->
+<!--EVENT-->
 <section id="event" class="sec s-event">
   <div class="box">
-    <!-- garis lengkung: gambar transparan (diambil dari desain) -->
+    <!-- garis" lengkung -->
     <img class="muncul d2" id="garis" src="assets/garis event.png" alt="">
     <h2 class="muncul d1" id="eJudul">Event</h2>
 
@@ -147,10 +140,9 @@
     <h4 class="muncul d1 nama" id="n4">Sparkler Send-Off (Closing)</h4>
     <p class="muncul d2 isi" id="p4">A glowing farewell under the night sky to mark the end of our celebration.</p>
   </div>
-  <div id="bulatMerah"></div>
 </section>
 
-<!-- ============ 7. RSVP ============ -->
+<!--RSVP-->
 <section id="rsvp" class="sec s-rsvp">
   <div class="box">
     <h2 class="muncul d1" id="rJudul">Will You Be Attending</h2>
@@ -177,7 +169,7 @@
   </div>
 </section>
 
-<!-- ============ 8. GIFT ============ -->
+<!--GIFT-->
 <section class="sec s-gift">
   <div class="box">
     <div id="bulatBunga"><img src="assets/bunga.jpg" alt="Lily"></div>
@@ -189,7 +181,7 @@
   </div>
 </section>
 
-<!-- ============ 9. THANK YOU ============ -->
+<!--THANK YOU-->
 <section class="sec s-thanks">
   <div class="box">
     <img class="muncul d1 foto" id="tStrip" src="assets/g1 bg9.jpg" alt="">
@@ -201,7 +193,7 @@
 </section>
 <div class="s-footer"></div>
 
-<!-- ============ POP-UP E-TICKET (simulasi) ============ -->
+<!--output E-TICKET-->
 <div id="popup">
   <div class="tiket">
     <button class="tutup" onclick="tutupPopup()">×</button>
@@ -214,10 +206,12 @@
     <p>Date &amp; Time</p><b>Sunday, November 08, 2026</b>
     <p>Venue</p><b>Villa Reverie</b>
     <p class="catatan">Please present this QR Code to the receptionist upon arrival.</p>
-    <button id="simpan" onclick="simpanTiket()">Download E-Ticket / Save Image</button>
+    <button id="simpan" onclick="simpanTiket()">Download E-Ticket</button>
   </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Fonts yng di pke: Pinyon Script, Playfair Display, Lora -->
